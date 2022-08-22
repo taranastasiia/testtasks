@@ -1,0 +1,205 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 40px 0px;
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+    border-radius: 12px;
+    margin-right: 20px;
+    width: 380px;
+    background-color: #FFFFFF;
+    position: relative;
+
+
+}
+
+.card:last-child {
+    margin-right: 0px;
+}
+
+.card:first-child::after {
+    content: 'Новинка';
+    position: absolute;
+    background: #FDCFF3;
+    border-radius: 8px;
+    padding: 0px 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+    top: 16px;
+    left: 16px;
+}
+
+.card:first-child::before {
+    content: 'Последний';
+    position: absolute;
+    background: #FFCF56;
+    border-radius: 8px;
+    padding: 0px 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+    top: 16px;
+    left: 143px;
+}
+
+.card__image {
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.card__info {
+    padding: 24px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__title {
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 36px;
+}
+
+.card__subtitle {
+    max-width: 332px;
+    line-height: 24px;
+}
+
+.card__button {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #42940F;
+    border: 2px solid green;
+    background: #FFFFFF;
+    border-radius: 12px;
+    align-items: center;
+    padding: 9px 84px;
+    width: 332px;
+
+}
+
+
+.card__button:hover:enabled {
+    background: #42940F;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.card__button:active:enabled {
+    background: #1F5200;
+    color: #FFFFFF;
+}
+
+.disabled {
+    background: #4E4E4E;
+    color: #FFFFFF;
+    border: 2px solid #4E4E4E;
+}
+
+@media (max-width: 1179px) {
+    .card:last-child {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 799px) {
+    .card:nth-child(2) {
+        margin-top: 25px;
+
+    }
+
+    .card {
+        margin-right: 0px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 385px) {
+    .card {
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    .card__image {
+        max-width: 300px;
+    }
+
+    .card__button {
+        padding: 5px 80px;
+        width: 260px;
+        font-size: 10px;
+    }
+
+    .card__subtitle {
+        line-height: 15px;
+    }
+
+}
+
+@media (max-width: 305px) {
+    .card {
+        max-width: 280px;
+    }
+
+    .card__image {
+        max-width: 280px;
+    }
+
+    .card__button {
+        padding: 5px 0px;
+        width: 240px;
+        font-size: 10px;
+    }
+
+    .card__subtitle {
+        line-height: 15px;
+    }
+
+    .card__title {
+        line-height: 20px;
+    }
+}
